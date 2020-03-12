@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <style>
-        h2 {
+        h4 {
             text-align: left;
 
         }
@@ -17,18 +17,36 @@
             text-align: center;
 
         }
+         #container1{ 
+         background-color:red; 
+         width: auto; 
+        }
+        #container2{
+            width: 100%;
+        }
+        #formPropietario{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #formularioM{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+			background: #F4DD5D;
+		}
     </style>
 
 </head>
 
 <body>
     <!--container-->
-    <div class="container ">
+    <div class="container" id="containe1">
             <div class="row">
-                <div class="col col-sm-8">
-                    <h2>Clinica De Mascotas</h2>
-                </div>
-                <div class="col col-sm-4"><img src="logo.png" alt=""></div>
+                <div class="col col-sm-8"><h1 class="logo_area text-center font-italic">Clinica De Mascotas</h1></div>
+                <div class="col col-sm-4"><img src="logo2.jpg" alt=""></div>
             </div>
 
             <!--navbar-->
@@ -38,13 +56,13 @@
                         <!-- Links -->
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link activate" href="Index.html">Inicio</a>
+                                <a class="nav-link activate font-italic" href="Index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="listar" href="#">Listar Propietarios</a>
+                                <a class="nav-link font-italic" id="listar" href="#">Listar Propietarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="AgregarMascotas.html">Agregar Mascotas</a>
+                                <a class="nav-link font-italic" href="AgregarMascotas.html">Agregar Mascotas</a>
                             </li>
                         </ul>
                     </nav>
@@ -54,21 +72,21 @@
     </div>
     <!--fin del container-->
 
-    <h1 class="titulo" id="txtagregarmascota">Agregar Mascota</h1>
+    <h1 class="titulo font-italic" id="txtagregarmascota">Agregar Mascota</h1>
 
     <!--debajo del titulo-->
 
      <!--container 2-->
     <div class="container" id="container2">
-        <h2>Listado de Propietarios</h2>
+        <h2 class="font-italic">Listado de Propietarios</h2>
        
         <div class="row">
 
              
-                <div class="col col-sm-8">
+                <div class="col col-md-9">
 
                     <div class="row">  
-                        <table class="table" id="u-tabla">
+                        <table class="table font-italic" id="u-tabla">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
@@ -84,7 +102,7 @@
                     </div> 
 
                     <div class="row">
-                        <table class="table" id="u-tabla3">
+                        <table class="table font-italic" id="u-tabla3">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
@@ -104,24 +122,24 @@
 
              
 
-            <div class="col col-sm-4">
+            <div class="col col-md-3">
                     <!--fila 1-->
-                    <div class="row" id="formPropietario">
+                    <div class="row font-italic" id="formPropietario">
 
-                            <h2>Agregar Propietario</h2>
-
+                        <h4>Agregar Propietario</h4>
                             <form role="form">
+                                
                                 <div class="form-group">
-                                    <label for="text">Nombres:</label> <input type="text" class="form-control" id="nombre">
+                                    <label for="text">Nombres:</label> <input type="text" required name="Name" class="form-control" id="nombre" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="text">Apellidos:</label> <input type="text" class="form-control" id="apellido">
+                                    <label for="text">Apellidos:</label> <input type="text" class="form-control" id="apellido"/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="text">Direccion:</label> <input type="text" class="form-control" id="direccion">
+                                    <label for="text">Direccion:</label> <input type="text" class="form-control" id="direccion"/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="text">Telefono:</label> <input type="text" class="form-control" id="telefono">
+                                    <label for="text">Telefono:</label> <input type="number" class="form-control" id="telefono">
                                 </div>
 
                                 <button type="submit" id="aggP" class="btn btn-primary">Agregar Persona</button>
@@ -132,21 +150,23 @@
 
                     <!--fila 2-->
                     <div class="row" id="formularioM">
-                            <h2>Agregar Mascota</h2>
+                            <h4>Agregar Mascota</h4>
 
                             <form role="form">
-                                <h2 id="dueño">Propietario: <label id="npropietario"></label></h2>
-
+                                <h4 id="dueño">Propietario: <label id="npropietario"></label></h4>
                                 <div class="form-group"> <label for="txt">Nombre:</label>
-                                    <input type="text" class="form-control" id="nombremascota">
+                                    <input type="text" class="form-control" id="nombremascota" placeholder='Nombre Mascota'>
                                 </div>
 
                                 <div class="form-group"> <label for="txt">Tipo:</label>
-                                    <input type="text" class="form-control" id="tipomascota">
+                                    <select id="tipomascota" name="sexo">
+                                        <option value="gato">Gato</option>
+                                        <option value="Perro">Perro</option>
+                                    </select>
                                 </div>
 
-                                <div class="form-group"> <label for="txt">F/N:</label>
-                                    <input type="text" class="form-control" id="fechamascota">
+                                <div class="form-group"> <label for="txt">F/E:</label>
+                                    <input type="date" id="fechamascota" class="form-control" >
                                 </div>
 
                                 <button type="submit" id="aggM" class="btn btn-primary">Agregar Mascota</button>
@@ -163,6 +183,7 @@
                                     <th>Nombre</th>
                                     <th>tipo</th>
                                     <th>fecha</th>
+                                    <th>Dueño</th>
                                     
                                 </tr>
                             </thead>
