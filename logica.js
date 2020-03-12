@@ -13,6 +13,7 @@ $(function () {
     editarUsuario();
     editarMascota();
     guardarEdicionUsuario();
+    guardarEdicionMascota();
     eliminar();
     eliminarM();
     ver();
@@ -233,7 +234,7 @@ function guardarEdicionUsuario() {
 }
 
 
-function guardarEdicionUsuario() {
+function guardarEdicionMascota() {
 
     $('#u-tabla2').on('click', '.guardarM', function(e) {
         e.preventDefault();
